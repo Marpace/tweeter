@@ -1,0 +1,12 @@
+header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/cream-dust-1920x1080.png");
+}
+
+.user-logo {
+  max-width: 200px;
+}
