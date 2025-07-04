@@ -53,14 +53,16 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/api/tweets" class="new-tweet__form">
-          <label for="tweet-text" id="tweet-text-label">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <label for="tweet-text" class="new-tweet__form-label">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" class="new-tweet__form-input"></textarea>
           <div class="new-tweet__container">
             <button type="submit" class="new-tweet__form-btn">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="tweet-text" id="tweet-text-counter">140</output>
           </div>
         </form>
       </section>
     </main>
+
+    <script src="./scripts/composer-char-counter.js"></script>
   </body>
 </html>
