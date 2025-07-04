@@ -29,5 +29,5 @@ body {
  main {
   width: 90%;
   margin: auto;
-  background-color: #545149;
+  background-color: inherit;
  }
