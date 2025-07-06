@@ -1,0 +1,91 @@
+.tweets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+article.tweet {
+  width: 90%;
+  padding: 20px;
+  max-width: 800px;
+  border: 2px solid #545149;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px 0 0 #9EABD9;
+}
+
+article.tweet header {
+  padding: 0;
+  background-image: none;
+  background-color: #f4f1ec;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-user {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.tweet-user span {
+  font-weight: 300;
+}
+
+.tweet-username {
+  color: #9EABD9;
+  font-weight: 400;
+}
+
+article.tweet p {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+.tweet-avatar {
+  width: 50px;
+  /* border-radius: 50%;
+  border: 2px solid black; */
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-added {
+  font-size: 17px;
+}
+
+.tweet-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.tweet-icons img {
+  width: 20px;
+}
+
+.tweet-icons__container {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tweet-icons__container img:last-child {
+  display: none;
+}
+.tweet-icons__container:hover img:last-child {
+  display: block;
+}
+.tweet-icons__container:hover img:first-child {
+  display: none;
+}
+
