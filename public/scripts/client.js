@@ -1,37 +1,8 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 $(document).ready(function() {
+  
+  const timeago = window.timeago; //library for date calculations
 
-  const testData =  [
-      {
-        "user": {
-          "name": "Newton",
-          "avatars": "https://i.imgur.com/73hZDYK.png"
-          ,
-          "handle": "@SirIsaac"
-        },
-        "content": {
-          "text": "If I have seen further it is by standing on the shoulders of giants"
-        },
-        "created_at": 1461116232227
-      },
-      {
-        "user": {
-          "name": "Descartes",
-          "avatars": "https://i.imgur.com/nlhLi3I.png",
-          "handle": "@rd" },
-        "content": {
-          "text": "Je pense , donc je suis"
-        },
-        "created_at": 1461113959088
-      }
-    ]
-
+  // create html article markup for a single tweet
   const createTweetElement = function(tweet) {
     let newElement = 
     `<article class="tweet">
@@ -44,7 +15,7 @@ $(document).ready(function() {
       </header>
       <p>${tweet.content.text}</p>
       <footer>
-        <span class="date-added">${tweet.created_at}</span>
+        <span class="date-added">${timeago.format(tweet.created_at)}</span>
         <div class="tweet-icons">
           <div class="tweet-icons__container">
             <img src="./icons/flag-icon.png" alt="" >
@@ -65,13 +36,49 @@ $(document).ready(function() {
     return newElement;
   }
 
+  //loop through an array of tweet objects and prepend to tweets section
   const renderTweets = function(tweets) {
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
-      $(".tweets").append($tweet);
+      $(".tweets").prepend($tweet);
     })
   }
 
-  renderTweets(testData);
+  const newTweetForm = $(".new-tweet__form");
+
+  //post request when user submits new tweet form
+  newTweetForm.on("submit", function(event) {
+    event.preventDefault();
+
+    const data = $(this).serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "/api/tweets",
+      data: data,
+      success: function(tweet) {
+        console.log("Success:", tweet);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown);
+      }
+    });
+
+  })
+
+  //fetch tweets as soon as document loads and render them on the page
+  $.ajax({
+    type: "GET",
+    url: "/api/tweets",
+    success: function(tweets) {
+      console.log("Success - fetched tweets from API");
+      renderTweets(tweets);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.error("Error:", textStatus, errorThrown);
+    }
+  });
+
+
 
 });

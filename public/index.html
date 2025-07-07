@@ -26,6 +26,9 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- timeago library for date calculations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
@@ -56,8 +59,8 @@
         <form method="POST" action="/api/tweets" class="new-tweet__form">
           <label for="tweet-text" class="new-tweet__form-label">What are you humming about?</label>
           <textarea name="text" id="tweet-text" class="new-tweet__form-input"></textarea>
-          <div class="new-tweet__container">
-            <button type="submit" class="new-tweet__form-btn">Tweet</button>
+          <div class="new-tweet__form-container">
+            <button type="submit" class="submit-btn">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id="tweet-text-counter">140</output>
           </div>
         </form>

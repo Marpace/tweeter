@@ -30,19 +30,27 @@
   border-bottom: 2px solid #545149 ;
 }
 
-.new-tweet__container {
+.new-tweet__form-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.new-tweet__form-btn {
+.submit-btn {
   height: 25px;
   background-color: #4056A1;
   color: white;
   font-family: "Bungee", sans-serif;
   font-size: 15px;
   border: none;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.submit-btn:hover {
+  color: #4056A1;
+  background-color: white;
+  border: 1px solid #4056A1;
 }
 
 .counter {
