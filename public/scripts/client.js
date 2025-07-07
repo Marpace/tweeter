@@ -38,6 +38,9 @@ $(document).ready(function() {
 
   //loop through an array of tweet objects and prepend to tweets section
   const renderTweets = function(tweets) {
+    //remove previous elements before rendering to avoid duplicates
+    $(".tweets").empty();
+
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
       $(".tweets").prepend($tweet);
@@ -49,6 +52,16 @@ $(document).ready(function() {
   //post request when user submits new tweet form
   newTweetForm.on("submit", function(event) {
     event.preventDefault();
+    const inputValue = $("#tweet-text").val()
+
+
+    if(inputValue === "") {
+      return alert("Invalid: input field is empty")
+    }
+
+    if(inputValue.length > 140) {
+      return alert("Invalid: tweet too long")
+    }
 
     const data = $(this).serialize();
 
@@ -58,6 +71,10 @@ $(document).ready(function() {
       data: data,
       success: function(tweet) {
         console.log("Success:", tweet);
+        //reset values in form 
+        $("#tweet-text-counter").val(140)
+        $("#tweet-text").val("")
+        loadTweets();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Error:", textStatus, errorThrown);
@@ -67,18 +84,21 @@ $(document).ready(function() {
   })
 
   //fetch tweets as soon as document loads and render them on the page
-  $.ajax({
-    type: "GET",
-    url: "/api/tweets",
-    success: function(tweets) {
-      console.log("Success - fetched tweets from API");
-      renderTweets(tweets);
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-      console.error("Error:", textStatus, errorThrown);
-    }
-  });
+  const loadTweets = function() {
+    $.ajax({
+      type: "GET",
+      url: "/api/tweets",
+      success: function(tweets) {
+        console.log("Success - fetched tweets from API");
+        renderTweets(tweets);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown);
+      }
+    });
+  }
+  
 
-
+  loadTweets();
 
 });
