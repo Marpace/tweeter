@@ -1,6 +1,16 @@
+
 $(document).ready(function() {
   
+
   const timeago = window.timeago; //library for date calculations
+
+  //use to escape text 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
 
   // create html article markup for a single tweet
   const createTweetElement = function(tweet) {
@@ -13,7 +23,7 @@ $(document).ready(function() {
         </div>
         <span class="tweet-username">${tweet.user.handle}</span>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text) }</p>
       <footer>
         <span class="date-added">${timeago.format(tweet.created_at)}</span>
         <div class="tweet-icons">
@@ -49,19 +59,40 @@ $(document).ready(function() {
 
   const newTweetForm = $(".new-tweet__form");
 
-  //post request when user submits new tweet form
-  newTweetForm.on("submit", function(event) {
-    event.preventDefault();
-    const inputValue = $("#tweet-text").val()
+  const showAlert = (message) => {
+    const alertElement = $(".alert");
+    const alertMessage = $(".alert__message");
+    alertMessage.html(message);
 
+    alertElement.css({height: "50px", border: "2px solid red"});
+    setTimeout(() => {
+      alertElement.css({height: "0px", border: "none"});
+    }, 2000);
+  }
+
+  const validateForm = function() {
+    const inputValue = $("#tweet-text").val().trim()
 
     if(inputValue === "") {
-      return alert("Invalid: input field is empty")
+      showAlert("Invalid: input field is empty")
+      return false;
     }
 
     if(inputValue.length > 140) {
-      return alert("Invalid: tweet too long")
+      showAlert("Invalid: tweet too long")    
+      return false;
     }
+    
+    return true;
+  }
+
+
+
+  //post request when user submits new tweet form
+  newTweetForm.on("submit", function(event) {
+    event.preventDefault();
+
+    if(!validateForm()) return;
 
     const data = $(this).serialize();
 
@@ -98,7 +129,8 @@ $(document).ready(function() {
     });
   }
   
-
   loadTweets();
+
+ 
 
 });

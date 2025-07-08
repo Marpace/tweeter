@@ -65,3 +65,21 @@
 .text-danger {
   color: red;
 }
+
+.alert {
+  padding: 0 10px;
+  height: 0px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border: 2px solid red; */
+  overflow: hidden;
+  transition: 200ms;
+}
+
+.alert__icon {
+  width: 30px;
+  height: 30px;
+}
+
