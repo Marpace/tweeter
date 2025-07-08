@@ -16,22 +16,40 @@ nav {
   font-size: 30px;
 }
 
-.nav-option {
-  position: relative;
+.nav-compose {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;
+  cursor: pointer;    
 }
 
-.nav-option__text {
+@keyframes bounce {
+  20% {translate: 0 10px;}
+  50% {translate: 0 0;}
+  70% {translate: 0 10px;}
+  100% {translate: 0 0;}
+}
+
+.nav-compose:hover > .nav-compose__icon {
+  animation-name: bounce; 
+  animation-duration: 900ms;
+}
+
+.nav-compose:hover > .nav-compose__text {
+  text-shadow: #d6d5d3 1px 0 10px;
+}
+
+
+.nav-compose__text {
   margin: 0;
+  transition: 100ms;
 }
 
-.nav-option__icon {
+.nav-compose__icon {
   width: 20px;
-  position: absolute;
-  bottom: -25px;
 }
 
 .text-bold {

@@ -100,17 +100,15 @@ $(document).ready(function() {
       type: "POST",
       url: "/api/tweets",
       data: data,
-      success: function(tweet) {
-        console.log("Success:", tweet);
-        //reset values in form 
-        $("#tweet-text-counter").val(140)
-        $("#tweet-text").val("")
-        loadTweets();
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        console.error("Error:", textStatus, errorThrown);
-      }
-    });
+    })
+    .then(tweet => {
+      console.log("Success:", tweet);
+      //reset values in form 
+      $("#tweet-text-counter").val(140)
+      $("#tweet-text").val("")
+      loadTweets();
+    })
+    .catch(err => console.log(err));
 
   })
 

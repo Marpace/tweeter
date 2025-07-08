@@ -29,5 +29,8 @@ body {
  main {
   width: 90%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; 
   background-color: inherit;
  }

@@ -37,9 +37,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="nav-logo">tweeter</span>
-      <div class="nav-option">
-        <p class="nav-option__text"><b>Write</b> a new tweet</p>
-        <img src="./icons/angles-double-icon.svg" class="nav-option__icon"/>
+      <div class="nav-compose" href="#new-tweet">
+        <p class="nav-compose__text"><b>Write</b> a new tweet</p>
+        <img src="./icons/angles-double-icon.svg" class="nav-compose__icon"/>
       </div>
     </nav>
     <header>
@@ -55,7 +55,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <div class="alert">
           <img class="alert__icon" src="./icons/alert-icon.png" alt="">
           <p class="alert__message text-danger"></p>
@@ -74,5 +73,6 @@
     </main>
 
     <script src="./scripts/composer-char-counter.js"></script>
+    <script src="./scripts/compose-tweet.js"></script>
   </body>
 </html>
