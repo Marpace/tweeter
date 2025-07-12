@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/scroll-button.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +38,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="nav-logo">tweeter</span>
-      <div class="nav-compose" href="#new-tweet">
+      <div class="nav-compose">
         <p class="nav-compose__text"><b>Write</b> a new tweet</p>
         <img src="./icons/angles-double-icon.svg" class="nav-compose__icon"/>
       </div>
@@ -54,6 +55,12 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <button class="scroll-to-top-btn">
+        <div>
+          <img src="./icons/angles-double-icon-white.svg" alt="scroll to top button">
+          <img src="./icons/angles-double-icon-red.svg" alt="scroll to top button">
+        </div>
+      </button>
       <section class="new-tweet">
         <div class="alert">
           <img class="alert__icon" src="./icons/alert-icon.png" alt="">
@@ -73,6 +80,6 @@
     </main>
 
     <script src="./scripts/composer-char-counter.js"></script>
-    <script src="./scripts/compose-tweet.js"></script>
+    <script src="./scripts/compose-tweet-button.js"></script>
   </body>
 </html>

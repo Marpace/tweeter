@@ -74,12 +74,12 @@ $(document).ready(function() {
     const inputValue = $("#tweet-text").val().trim()
 
     if(inputValue === "") {
-      showAlert("Invalid: input field is empty")
+      showAlert("Input field is empty!")
       return false;
     }
 
     if(inputValue.length > 140) {
-      showAlert("Invalid: tweet too long")    
+      showAlert("Your tweet is too long")    
       return false;
     }
     
@@ -130,5 +130,9 @@ $(document).ready(function() {
   loadTweets();
 
  
+  
+
+
+
 
 });

@@ -1,3 +1,2 @@
 - Figure out why font awesome is not working
-- trim string so it does not go out of the tweet container
-- deal with this "You are directly injecting the tweet content into your HTML. This could potentially lead to Cross-Site Scripting (XSS) attacks if the content includes malicious scripts. Consider using a safer method to insert the content, such as jQuery's text() method."
+- Deal with long strings that go out of the tweet container
