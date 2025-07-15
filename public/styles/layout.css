@@ -27,10 +27,15 @@ body {
  */
 
  main {
-  width: 90%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 50px; 
   background-color: inherit;
  }
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+}

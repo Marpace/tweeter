@@ -8,6 +8,30 @@ header {
   background-image: url("../images/cream-dust-1920x1080.png");
 }
 
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user-logo {
   max-width: 200px;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 25vw;
+    margin: 0;
+    max-width: 350px;
+  }
+
+  .user-container {
+    position: fixed;
+    top: 200px;
+  }
+
+  .user-name {
+    text-align: center;
+    width: 90%;
+  }
 }

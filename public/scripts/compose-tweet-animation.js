@@ -55,6 +55,7 @@ $(document).ready(function() {
       $("html, body").animate({
         scrollTop: $(newTweetSection).offset().top - 200
       }, 400);
+      tweetInput.focus();
     } else {
       showNewTweetForm();
     }

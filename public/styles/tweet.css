@@ -18,7 +18,8 @@ article.tweet:hover {
   box-shadow: 5px 5px 0 0 #9EABD9;
 }
 
-article.tweet header {
+.tweet-header {
+  display: flex;
   padding: 0;
   background-image: none;
   background-color: #f4f1ec;
@@ -27,7 +28,7 @@ article.tweet header {
   justify-content: space-between;
 }
 
-.tweet-user {
+.tweet-header__user {
   display: flex;
   align-items: flex-end;
   gap: 10px;
@@ -48,7 +49,7 @@ article.tweet p {
   border-bottom: 2px solid black;
 }
 
-.tweet-avatar {
+.tweet-header__avatar {
   width: 50px;
 }
 

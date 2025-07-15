@@ -16,13 +16,13 @@ $(document).ready(function() {
   const createTweetElement = function(tweet) {
     let newElement = 
     `<article class="tweet">
-      <header>
-        <div class="tweet-user">
-          <img class="tweet-avatar" src=${tweet.user.avatars} alt="">
+      <div class="tweet-header">
+        <div class="tweet-header__user">
+          <img class="tweet-header__avatar" src=${tweet.user.avatars} alt="">
           <span>${tweet.user.name}</span>
         </div>
         <span class="tweet-username">${tweet.user.handle}</span>
-      </header>
+      </div>
       <p>${escape(tweet.content.text) }</p>
       <footer>
         <span class="date-added">${timeago.format(tweet.created_at)}</span>
