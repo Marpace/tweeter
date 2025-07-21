@@ -1,0 +1,46 @@
+@use "base" as *;
+
+.scroll-to-top-btn {
+  padding: 0;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover img:last-child {
+    display: block;
+  }
+  &:hover img:first-child {
+    display: none;
+  }
+  
+  div {
+    background-color: $danger_red;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &:hover {
+      background-color: white;
+      border: 1px solid red;
+    }
+
+    img {
+      width: 20px;
+      
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  
+  
+  
+}

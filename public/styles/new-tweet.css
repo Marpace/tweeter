@@ -1,6 +1,6 @@
 .new-tweet {
   height: 0;
-  display: flex ;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -8,17 +8,22 @@
   overflow: hidden;
   transition: 300ms;
 }
-
-.new-tweet-container {
-  height: 100%;
-  width: 100%;
-  display: flex ;
-  justify-content: center;
-  flex-direction: column;
+.new-tweet-alert {
+  padding: 0 10px;
+  height: 0px;
+  display: flex;
   align-items: center;
   gap: 20px;
+  overflow: hidden;
+  transition: 200ms;
 }
-
+.new-tweet-alert__icon {
+  width: 30px;
+  height: 30px;
+}
+.new-tweet-alert__message {
+  color: #e42020;
+}
 .new-tweet__form {
   display: flex;
   flex-direction: column;
@@ -28,69 +33,39 @@
   box-shadow: 4px 4px 15px -7px;
   padding: 20px;
 }
-
 .new-tweet__form-label {
   font-size: 20px;
 }
-
 .new-tweet__form-input {
   height: 40px;
   padding: 10px;
   font-size: 16px;
   border: none;
   background: none;
-  border-bottom: 2px solid #545149 ;
+  border-bottom: 2px solid #545149;
+  resize: none;
 }
-
 .new-tweet__form-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
-.submit-btn {
+.new-tweet__form-container .submit-btn {
   height: 25px;
   background-color: #4056A1;
-  color: white;
+  color: #ffffff;
   font-family: "Bungee", sans-serif;
   font-size: 15px;
   border: none;
   cursor: pointer;
   transition: 100ms;
 }
-
-.submit-btn:hover {
+.new-tweet__form-container .submit-btn:hover {
   color: #4056A1;
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #4056A1;
 }
-
-.counter {
+.new-tweet__form-container .counter {
   font-family: "Bungee", sans-serif;
   font-size: 15px;
 }
-
-.invalid-input {
-  border: 2px solid red;
-}
-
-.text-danger {
-  color: red;
-}
-
-.alert {
-  padding: 0 10px;
-  height: 0px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  overflow: hidden;
-  transition: 200ms;
-  /* margin-bottom: 20px; */
-}
-
-.alert__icon {
-  width: 30px;
-  height: 30px;
-}
-

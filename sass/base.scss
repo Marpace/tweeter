@@ -1,0 +1,26 @@
+// COLORS
+$body_background_color: #f4f1ec;
+$dark_blue: #4056A1;
+$danger_red: #e42020;
+$white: #ffffff;
+$dark_grey: #545149;
+
+
+//BREAKPOINTS 
+$tablet: 768px;
+$desktop: 1024px;
+
+
+// MIXINS 
+@mixin flex_centered($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive($size) {
+    @media only screen and (min-width: $size) {
+        @content
+    }
+}

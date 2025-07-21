@@ -9,9 +9,14 @@
   border-radius: 50%;
   overflow: hidden;
 }
-
+.scroll-to-top-btn:hover img:last-child {
+  display: block;
+}
+.scroll-to-top-btn:hover img:first-child {
+  display: none;
+}
 .scroll-to-top-btn div {
-  background-color: red;
+  background-color: #e42020;
   border-radius: 50%;
   height: 70px;
   width: 70px;
@@ -19,23 +24,13 @@
   justify-content: center;
   align-items: center;
 }
-
 .scroll-to-top-btn div:hover {
   background-color: white;
   border: 1px solid red;
 }
-
-.scroll-to-top-btn img {
+.scroll-to-top-btn div img {
   width: 20px;
 }
-
-
-.scroll-to-top-btn img:last-child {
-  display: none;
-}
-.scroll-to-top-btn:hover img:last-child {
-  display: block;
-}
-.scroll-to-top-btn:hover img:first-child {
+.scroll-to-top-btn div img:last-child {
   display: none;
 }

@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -40,17 +43,14 @@
       <span class="nav-logo">tweeter</span>
       <div class="nav-compose">
         <p class="nav-compose__text"><b>Write</b> a new tweet</p>
-        <img src="./icons/angles-double-icon.svg" class="nav-compose__icon"/>
+        <img class="nav-compose__icon-add" src="./icons/new-tweet-icon.png" alt="plus sign">
+        <img class="nav-compose__icon-arrow" src="./icons/angles-double-icon.png"  alt="arrow pointing downwards"/>
       </div>
     </nav>
     <header>
       <div class="user-container">
-        <div>
-          <img class="user-logo" src="/images/profile-hex-2.png">
-        </div>
-        <div >
-          <h2 class="user-name">Pablo Almonacid</h2>
-        </div>
+        <img class="user-logo" src="/images/profile-hex-2.png">
+        <h2 class="user-name">Pablo Almonacid</h2>
       </div>
     </header>
 
@@ -58,15 +58,15 @@
     <main class="container">
       <button class="scroll-to-top-btn">
         <div>
-          <img src="./icons/angles-double-icon-white.svg" alt="scroll to top button">
-          <img src="./icons/angles-double-icon-red.svg" alt="scroll to top button">
+          <img src="./icons/back-to-top-white.png" alt="scroll to top button">
+          <img src="./icons/back-to-top-red.png" alt="scroll to top button">
         </div>
       </button>
       <section class="new-tweet">
-        <div class="alert">
-          <img class="alert__icon" src="./icons/alert-icon.png" alt="">
-          <p class="alert__message text-danger"></p>
-          <img class="alert__icon" src="./icons/alert-icon.png" alt="">
+        <div class="new-tweet-alert">
+          <img class="new-tweet-alert__icon" src="./icons/alert-icon.png" alt="">
+          <p class="new-tweet-alert__message text-danger"></p>
+          <img class="new-tweet-alert__icon" src="./icons/alert-icon.png" alt="">
         </div>
         <form method="POST" action="/api/tweets" class="new-tweet__form">
           <label for="tweet-text" class="new-tweet__form-label">What are you humming about?</label>

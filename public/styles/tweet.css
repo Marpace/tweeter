@@ -6,19 +6,16 @@
   gap: 50px;
   margin-bottom: 100px;
 }
-
-article.tweet {
+.tweets .tweet {
   width: 90%;
   padding: 20px;
   max-width: 800px;
   border: 2px solid #545149;
 }
-
-article.tweet:hover {
+.tweets .tweet:hover {
   box-shadow: 5px 5px 0 0 #9EABD9;
 }
-
-.tweet-header {
+.tweets .tweet-header {
   display: flex;
   padding: 0;
   background-image: none;
@@ -27,65 +24,53 @@ article.tweet:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-
-.tweet-header__user {
+.tweets .tweet-header__user {
   display: flex;
   align-items: flex-end;
   gap: 10px;
 }
-
-.tweet-user span {
+.tweets .tweet-header__user-avatar {
+  width: 50px;
+}
+.tweets .tweet-header__user-username {
   font-weight: 300;
 }
-
-.tweet-username {
+.tweets .tweet-header__handle {
   color: #9EABD9;
   font-weight: 400;
 }
-
-article.tweet p {
+.tweets .tweet .tweet-content {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 2px solid black;
 }
-
-.tweet-header__avatar {
-  width: 50px;
-}
-
-article.tweet footer {
+.tweets .tweet footer {
   display: flex;
   justify-content: space-between;
 }
-
-.date-added {
+.tweets .tweet footer .date-added {
   font-size: 17px;
 }
-
-.tweet-icons {
+.tweets .tweet footer .tweet-icons {
   display: flex;
   gap: 20px;
 }
-
-.tweet-icons img {
-  width: 20px;
-}
-
-.tweet-icons__container {
+.tweets .tweet footer .tweet-icons .tweet-icons__container {
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-.tweet-icons__container img:last-child {
-  display: none;
-}
-.tweet-icons__container:hover img:last-child {
+.tweets .tweet footer .tweet-icons .tweet-icons__container:hover img:last-child {
   display: block;
 }
-.tweet-icons__container:hover img:first-child {
+.tweets .tweet footer .tweet-icons .tweet-icons__container:hover img:first-child {
   display: none;
 }
-
+.tweets .tweet footer .tweet-icons .tweet-icons__container img {
+  width: 20px;
+}
+.tweets .tweet footer .tweet-icons .tweet-icons__container img:last-child {
+  display: none;
+}

@@ -1,67 +1,83 @@
 nav {
   height: 120px;
-  width: 100%;
+  width: 100vw;
   padding: 0 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   background-image: url("../images/cream-dust-1920x1080.png");
   color: #ffffff;
   position: fixed;
   top: 0;
   z-index: 1000;
 }
-
-.nav-logo {
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+}
+nav .nav-logo {
   font-family: "Bungee", sans-serif;
   font-size: 30px;
 }
-
-.nav-compose {
-  height: 100%;
+nav .nav-compose {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  cursor: pointer;   
-  transition: opacity 200ms; 
+  cursor: pointer;
+  transition: opacity 200ms;
 }
-
+@media only screen and (min-width: 768px) {
+  nav .nav-compose {
+    height: 100%;
+  }
+}
 @keyframes bounce {
-  20% {translate: 0 10px;}
-  50% {translate: 0 0;}
-  70% {translate: 0 10px;}
-  100% {translate: 0 0;}
+  20% {
+    translate: 0 10px;
+  }
+  50% {
+    translate: 0 0;
+  }
+  70% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 0;
+  }
 }
-
-.nav-compose:hover > .nav-compose__icon {
-  animation-name: bounce; 
+nav .nav-compose:hover > .nav-compose__icon-arrow {
+  animation-name: bounce;
   animation-duration: 900ms;
 }
-
-.nav-compose:hover > .nav-compose__text {
+nav .nav-compose:hover > .nav-compose__text {
   text-shadow: #d6d5d3 1px 0 10px;
 }
-
-
-.nav-compose__text {
-  margin: 0;
-  transition: 100ms;
+nav .nav-compose__text {
+  display: none;
 }
-
-.nav-compose__icon {
-  width: 20px;
+@media only screen and (min-width: 768px) {
+  nav .nav-compose__text {
+    display: block;
+    margin: 0;
+    transition: 100ms;
+  }
 }
-
-.text-bold {
-  font-weight: 600;
+@media only screen and (min-width: 768px) {
+  nav .nav-compose__icon-add {
+    display: none;
+  }
 }
-
-@media only screen and (min-width: 1024px) {
-  nav {
-    background-color: #4056A1;
-    background-image: none;
+nav .nav-compose__icon-arrow {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  nav .nav-compose__icon-arrow {
+    display: block;
+    width: 20px;
   }
 }

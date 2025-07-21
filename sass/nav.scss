@@ -1,0 +1,77 @@
+@use "base" as *;
+
+nav {
+  height: 120px;
+  width: 100vw;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../images/cream-dust-1920x1080.png");
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  @include responsive($desktop) {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  .nav-logo {
+    font-family: "Bungee", sans-serif;
+    font-size: 30px;
+  }
+  
+  .nav-compose {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;   
+    transition: opacity 200ms; 
+    @include responsive($tablet) {
+      height: 100%;
+    }
+
+    @keyframes bounce {
+      20% {translate: 0 10px;}
+      50% {translate: 0 0;}
+      70% {translate: 0 10px;}
+      100% {translate: 0 0;}
+    }
+    
+    &:hover > .nav-compose__icon-arrow {
+      animation-name: bounce; 
+      animation-duration: 900ms;
+    }
+    
+    &:hover > .nav-compose__text {
+      text-shadow: #d6d5d3 1px 0 10px;
+    }
+
+    &__text {
+      display: none;
+      @include responsive($tablet) {
+        display: block;
+        margin: 0;
+        transition: 100ms;
+      }
+    }
+
+    &__icon-add {
+      @include responsive($tablet) {
+        display: none;
+      }
+    }
+
+    &__icon-arrow {
+      display: none;
+      @include responsive($tablet) {
+        display: block;
+        width: 20px;
+      }
+    }
+  }
+}

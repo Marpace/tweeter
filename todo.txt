@@ -1,2 +1,8 @@
 - Figure out why font awesome is not working
+
+
 - Deal with long strings that go out of the tweet container
+  
+
+- font size is small on mobile
+  FIXED - needed viewport meta tag in index.html

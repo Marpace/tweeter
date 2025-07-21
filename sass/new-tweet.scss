@@ -1,0 +1,98 @@
+@use "base" as *;
+
+.new-tweet {
+  height: 0;
+  display: flex ;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  transition: 300ms;
+  
+  &-alert {
+    padding: 0 10px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    transition: 200ms;
+    
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__message {
+      color: $danger_red;
+    }
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 4px 4px 15px -7px;
+    padding: 20px;
+    
+    &-label {
+      font-size: 20px;
+    }
+    
+    &-input {
+      height: 40px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      background: none;
+      border-bottom: 2px solid #545149;
+      resize: none;
+    }
+    
+    &-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      
+      .submit-btn {
+        height: 25px;
+        background-color: $dark_blue;
+        color: $white;
+        font-family: "Bungee", sans-serif;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+        transition: 100ms;
+      }
+      
+      .submit-btn:hover {
+        color: $dark_blue;
+        background-color: $white;
+        border: 1px solid $dark_blue;
+      }
+      
+      .counter {
+        font-family: "Bungee", sans-serif;
+        font-size: 15px;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  // .invalid-input {
+  //   border: 2px solid $danger_red;
+  // }
+  
+  // .text-danger {
+  //   color: $danger_red;
+  // }
+  
+}
+
+

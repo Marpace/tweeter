@@ -1,3 +1,5 @@
+@use "base" as *;
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -7,7 +9,6 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
   font-family: "Source Sans 3", sans-serif;
@@ -16,23 +17,23 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   min-height: 100vh;
   width: 100vw;
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $dark_grey;
+  background-color: $body_background_color;
   font-size: 24px;
   padding-top: 120px;
-}
-@media only screen and (min-width: 1024px) {
-  body {
+  @include responsive($desktop) {
     display: flex;
     justify-content: center;
   }
-}
-body main {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  background-color: inherit;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
+    background-color: inherit;
+  }
 }
