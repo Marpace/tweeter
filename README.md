@@ -20,6 +20,6 @@ Tweeter is a simple single-page AJAX-based twitter clone that uses jQuery, HTML5
 
 ## Screenshots
 
-!["Screenshot of desktop version"](https://github.com/Marpace/tweeter/blob/master/docs/desktop.png?raw=true);
-!["Screenshot of tablet version"](https://github.com/Marpace/tweeter/blob/master/docs/tablet.png?raw=true);
-!["Screenshot of mobile version"](https://github.com/Marpace/tweeter/blob/master/docs/mobile.png?raw=true);
+!["Screenshot of desktop version"](https://github.com/Marpace/tweeter/blob/master/docs/desktop.png?raw=true)
+!["Screenshot of tablet version"](https://github.com/Marpace/tweeter/blob/master/docs/tablet.png?raw=true)
+!["Screenshot of mobile version"](https://github.com/Marpace/tweeter/blob/master/docs/mobile.png?raw=true)
