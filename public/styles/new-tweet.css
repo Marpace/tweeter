@@ -44,6 +44,7 @@
   background: none;
   border-bottom: 2px solid #545149;
   resize: none;
+  color: #545149;
 }
 .new-tweet__form-container {
   width: 100%;

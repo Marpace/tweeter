@@ -2,7 +2,7 @@
 
 
 - Deal with long strings that go out of the tweet container
-  
+  FIXED - added "overflow: hidden;" to tweet element
 
 - font size is small on mobile
   FIXED - needed viewport meta tag in index.html

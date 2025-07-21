@@ -48,8 +48,8 @@
       font-size: 16px;
       border: none;
       background: none;
-      border-bottom: 2px solid #545149;
-      resize: none;
+      border-bottom: 2px solid $dark_grey;
+      resize: none;color: $dark_grey;
     }
     
     &-container {
@@ -80,19 +80,6 @@
       }
     }
   }
-  
-  
-  
-  
-  
-  // .invalid-input {
-  //   border: 2px solid $danger_red;
-  // }
-  
-  // .text-danger {
-  //   color: $danger_red;
-  // }
-  
 }
 
 
